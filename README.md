@@ -49,6 +49,11 @@ The first step was performing a full port scan to identify exposed services.
 nmap -sC -sV -p- <TARGET_IP>
 ```
 
+### Nmap Results
+
+<img width="1308" height="327" alt="image" src="https://github.com/user-attachments/assets/d1deae73-ef73-434d-8ab8-8a54995afa10" />
+
+
 The scan revealed:
 
 ```text
@@ -71,6 +76,11 @@ R1ckRul3s
 ```
 
 Further inspection of the application was performed using directory brute force.
+
+### Username Discovery
+
+<img width="1342" height="652" alt="image" src="https://github.com/user-attachments/assets/f54b4d73-1103-41e9-98fc-d0db61388d74" />
+
 
 ```bash
 gobuster dir -u http://<TARGET_IP> -w /usr/share/seclists/Discovery/Web-Content/common.txt
@@ -101,6 +111,7 @@ Directory enumeration revealed a hidden endpoint:
 ```
 /portal.php
 ```
+<img width="1315" height="607" alt="image" src="https://github.com/user-attachments/assets/3c50908e-8581-4ea0-8a28-f20b47dfd3d6" />
 
 This page contained a command execution interface.
 
