@@ -1,0 +1,1 @@
+# Pickle-Rick---TryHackMe-Writeup
